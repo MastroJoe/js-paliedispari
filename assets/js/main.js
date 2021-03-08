@@ -22,7 +22,7 @@ function checkPalindroma (str) {
 }
 
 // stampo e verifico il risultato
-console.log(checkPalindroma(parola));
+console.log("La parola è palindroma? " + checkPalindroma(parola));
 
 
 
@@ -78,4 +78,24 @@ var somma = numeroUtente + numeroRandomPc;
 console.log("La somma dei due numeri è: " + somma);
 
 // creo una funzione che stabilisca se la somma è pari o dispari
-function 
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+function checkNumero (risultatoSomma) {
+  // se la somma è pari, stampo
+  if (somma%2 == 0) {
+    console.log('La somma è pari.');
+    // altrimenti
+  } else {
+    console.log('La somma è dispari.');
+  }
+}
+
+// dichiaro il vincitore
+if (scelta == "pari" && somma%2 == 0) {
+  console.log("Il vincitore sei tu! :) ");
+} else if (sceltaUtente == "pari" && somma%2 == 1){
+  console.log("Vince il computer :( ");
+} else if(scelta == "dispari" && somma%2 == 0){
+  console.log("Vince il computer :( ");
+} else {
+  console.log("Il vincitore sei tu! :) ");
+}
