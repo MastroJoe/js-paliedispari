@@ -14,9 +14,11 @@ if (!isNaN(parola)) {
 }
 
 // creo funzione per controllare se la parola è palindroma
-function parolaPalindroma (str) {
+function checkPalindroma (str) {
   // divido ogni lettera della parola in sottostringhe
   // inverto l'ordine delle lettere
   // ricompongo la parola unendo le singole lettere.
   return str == str.split('').reverse().join('');
 }
+// stampo e verifico il risultato
+console.log(checkPalindroma(parola));
