@@ -20,6 +20,7 @@ function checkPalindroma (str) {
   // ricompongo la parola unendo le singole lettere.
   return str == str.split('').reverse().join('');
 }
+
 // stampo e verifico il risultato
 console.log(checkPalindroma(parola));
 
@@ -34,7 +35,7 @@ var pariDispari = true;
 // finché pariDispari sarà vera
 while (pariDispari) {
   // chiedo all'utente di scegliere tra pari e dispari
-  var scelta = prompt("Scegli tra pari o dispari: ");
+  var scelta = prompt("Scegli tra pari e dispari: ");
   // se la parola inserita è un numero
   if (!isNaN(scelta)) {
     // stampo messaggio di errore
@@ -54,3 +55,27 @@ while (pariDispari) {
     }
   }
 }
+
+// chiedo all'utente di inserire un numero tra 1 e 5 (compresi)
+do {
+  var numeroUtente = parseInt(prompt("Scegli e inserisci un numero da 1 a 5: "));
+} while (!(numeroUtente >= 1 && numeroUtente <= 5)) {
+  console.log("Il tuo numero è: " + numeroUtente);
+}
+
+// creo una funzione che generi un numero random da 1 a 5 per il computer
+function numeroRandomPc (min, max) {
+  var numeroPc = Math.floor(Math.random() * (max) + min);
+  return numeroPc;
+}
+
+// e stampo il risultato
+var numeroRandomPc = numeroRandomPc(1, 5);
+console.log("Il numero del pc è: " + numeroRandomPc);
+
+// sommo i due numeri ottenuti e stampo il risultato
+var somma = numeroUtente + numeroRandomPc;
+console.log("La somma dei due numeri è: " + somma);
+
+// creo una funzione che stabilisca se la somma è pari o dispari
+function 
