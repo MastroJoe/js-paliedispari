@@ -75,16 +75,13 @@ console.log("Il numero del pc è: " + randomNumberPc);
 var somma = numeroUtente + randomNumberPc;
 console.log("La somma dei due numeri è: " + somma);
 
-// creo una funzione che stabilisca se la somma è pari o dispari
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function checkNumber (risultatoSomma) {
-  // se la somma è pari, stampo
-  if (somma%2 == 0) {
-    console.log('La somma è pari.');
-    // altrimenti
-  } else {
-    console.log('La somma è dispari.');
-  }
+// Stabiliamo se la somma dei due numeri è pari o dispari
+// se la somma è pari, stampo
+if (somma%2 == 0) {
+  console.log('La somma è pari.');
+  // altrimenti
+} else {
+  console.log('La somma è dispari.');
 }
 
 // dichiaro il vincitore
