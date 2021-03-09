@@ -1,29 +1,28 @@
 // Palidroma
 // chiedo all'utente di inserire una parola
-var parola = prompt('Inserisci una parola: ');
+var parolaUtente = prompt('Inserisci una parola: ');
 
 // CONTROLLO
 // se la parola inserita è un numero
-if (!isNaN(parola)) {
+if (!isNaN(parolaUtente)) {
   // stampo messaggio di errore
   console.log('Attenzione! Non hai inserito una parola!');
   // altrimenti
 } else {
   // stampo la parola inserita
-  console.log(parola);
+  console.log(parolaUtente);
 }
 
 // creo funzione per controllare se la parola è palindroma
-function checkPalindroma (str) {
-  // divido ogni lettera della parola in sottostringhe
+function checkPalindrome (parola) {
+  // divido ogni lettera della parola (in sottostringhe)
   // inverto l'ordine delle lettere
   // ricompongo la parola unendo le singole lettere.
-  return str == str.split('').reverse().join('');
+  return parola == parola.split('').reverse().join('');
 }
 
 // stampo e verifico il risultato
-console.log("La parola è palindroma? " + checkPalindroma(parola));
-
+console.log("La parola è palindroma? " + checkPalindrome(parolaUtente));
 
 
 
@@ -46,11 +45,11 @@ while (pariDispari) {
     switch (scelta) {
       case "pari":
         pariDispari = false;
-        console.log('Pari');
+        console.log('Hai scelto: Pari');
         break;
       case "dispari":
         pariDispari = false;
-        console.log('Dispari');
+        console.log('Hai scelto: Dispari');
         break;
     }
   }
@@ -64,22 +63,21 @@ do {
 }
 
 // creo una funzione che generi un numero random da 1 a 5 per il computer
-function numeroRandomPc (min, max) {
-  var numeroPc = Math.floor(Math.random() * (max) + min);
-  return numeroPc;
+function randomNumberPc (min, max) {
+  return Math.floor(Math.random() * (max) + min);
 }
 
 // e stampo il risultato
-var numeroRandomPc = numeroRandomPc(1, 5);
-console.log("Il numero del pc è: " + numeroRandomPc);
+var randomNumberPc = randomNumberPc(1, 5);
+console.log("Il numero del pc è: " + randomNumberPc);
 
 // sommo i due numeri ottenuti e stampo il risultato
-var somma = numeroUtente + numeroRandomPc;
+var somma = numeroUtente + randomNumberPc;
 console.log("La somma dei due numeri è: " + somma);
 
 // creo una funzione che stabilisca se la somma è pari o dispari
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function checkNumero (risultatoSomma) {
+function checkNumber (risultatoSomma) {
   // se la somma è pari, stampo
   if (somma%2 == 0) {
     console.log('La somma è pari.');
@@ -92,7 +90,7 @@ function checkNumero (risultatoSomma) {
 // dichiaro il vincitore
 if (scelta == "pari" && somma%2 == 0) {
   console.log("Il vincitore sei tu! :) ");
-} else if (sceltaUtente == "pari" && somma%2 == 1){
+} else if (scelta == "pari" && somma%2 == 1){
   console.log("Vince il computer :( ");
 } else if(scelta == "dispari" && somma%2 == 0){
   console.log("Vince il computer :( ");
